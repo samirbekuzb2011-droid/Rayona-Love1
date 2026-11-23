@@ -6,6 +6,15 @@ import {
   VoiceMessage,
 } from '../types';
 
+import imgHappy from '../assets/images/happy.jpg';
+import imgHeart from '../assets/images/heart.jpg';
+import imgHair from '../assets/images/hair.jpg';
+import imgLove from '../assets/images/love.jpg';
+import imgKind from '../assets/images/kind.jpg';
+import imgBeautiful from '../assets/images/beautiful.jpg';
+import imgHappyBirthday from '../assets/images/happy_birthday.jpg';
+import imgKid from '../assets/images/kid.jpg';
+
 const DB_NAME = 'love_archive_db';
 const DB_VERSION = 1;
 
@@ -15,85 +24,112 @@ const STORE_VOICES = 'voices';
 const STORE_TRACKS = 'tracks';
 
 export const DEFAULT_PROFILE: LoveLetterProfile = {
-  recipientName: 'Любимая',
+  recipientName: 'Района',
   senderName: 'Твой навсегда',
   kicker: 'Личный архив чувств',
   headline: 'Каждое мгновение рядом с тобой — моя самая любимая история',
   leadQuote:
-    'Я собрал здесь наши фотографии, маленькие заметки и голос, чтобы ты всегда помнила, как сильно я тебя люблю — даже в самые обычные дни.',
-  letterBody: `Родная моя,\n\nИногда слова кажутся слишком тихими по сравнению с тем, что я чувствую, когда смотрю на тебя. Ты умеешь превращать самый обычный вторник в праздник просто тем, что смеёшься рядом, завариваешь чай или держишь меня за руку на переходе.\n\nМне хотелось создать место, которое принадлежит только нам двоим. Сюда я буду добавлять твои любимые фотографии, подписывать всё, о чём не успел сказать вслух, и оставлять голосовые сообщения на случай, если соскучишься.\n\nСпасибо тебе за тепло, нежность и свет, который ты приносишь в каждый мой день. Я люблю тебя больше, чем вчера, и чуть меньше, чем завтра.`,
-  startDate: '2024-05-14',
+    'Я собрал здесь наши фотографии, маленькие заметки и голос, чтобы ты всегда помнила, как сильно я тебя люблю — даже в самые обычные дни, описывать мою любовь к тебе словами невозможно.',
+  letterBody:
+    'Родная моя Района,\n\nИногда слова кажутся слишком тихими по сравнению с тем, что я чувствую, когда смотрю на тебя. Ты умеешь превращать самый обычный день в праздник просто тем, что смеёшься рядом и даришь мне свою улыбку.\n\nМне хотелось создать место, которое принадлежит только нам. Сюда я добавил твои любимые фотографии и тёплые слова, чтобы ты всегда знала, как сильно ты мне дорога.\n\nСпасибо тебе за тепло, нежность и свет, который ты приносишь в каждый мой день. Я люблю тебя больше, чем вчера, и чуть меньше, чем завтра.',
+  startDate: '2026-10-14',
 };
 
 export const INITIAL_PHOTOS: PhotoMemory[] = [
   {
     id: 'seed-1',
-    title: 'Золотой час в нашем парке',
-    caption:
-      'Помню, как солнце садилось прямо за деревьями, а мы не хотели отпускать руки ни на секунду. Тот самый вечер, когда время остановилось.',
-    category: 'Прогулки',
-    dateLabel: '14 октября',
-    imageUrl: '/src/assets/images/hero_couple_golden_hour_1795402353440.jpg',
+    title: 'я тебя люблю моя Района ❤️',
+    caption: 'Ты моё солнышко, моя звёздочка и моё вдохновение каждый день.',
+    category: 'Нежность',
+    dateLabel: '24 июля',
+    imageUrl: imgHappy,
     aspectRatio: 'wide',
     comments: [
       {
         id: 'c-1',
         author: 'Я',
-        text: 'Каждый раз смотрю на этот кадр и улыбаюсь. Самая тёплая прогулка осени.',
-        createdAt: '14 октября, 21:15',
+        text: 'Самый особенный день и самая любимая девочка ❤️',
+        createdAt: '23 ноября',
       },
     ],
-    createdAt: 1730000000000,
+    createdAt: 1730000008000,
   },
   {
     id: 'seed-2',
-    title: 'Воскресный кофе у окна',
-    caption:
-      'Утро, когда никуда не нужно спешить. Запах свежего круассана, твой сонный взгляд и тишина за стеклом.',
-    category: 'Утро',
-    dateLabel: '2 ноября',
-    imageUrl: '/src/assets/images/moment_coffee_morning_1795402353417.jpg',
+    title: 'моя милашка',
+    caption: 'Самая очаровательная и любимая улыбка на свете.',
+    category: 'Нежность',
+    dateLabel: '23 ноября',
+    imageUrl: imgHeart,
     aspectRatio: 'square',
-    comments: [
-      {
-        id: 'c-2',
-        author: 'Я',
-        text: 'Обещаю всегда приносить тебе самый хрустящий круассан.',
-        createdAt: '2 ноября, 11:40',
-      },
-    ],
-    createdAt: 1730500000000,
+    comments: [],
+    createdAt: 1730000007000,
   },
   {
     id: 'seed-3',
-    title: 'Закат у самой воды',
-    caption:
-      'Розовое небо, шум прибоя и мокрый песок под ногами. В тот момент я точно знал, что хочу встречать с тобой все закаты.',
-    category: 'Вечер',
-    dateLabel: '19 августа',
-    imageUrl: '/src/assets/images/moment_sea_sunset_1795402355219.jpg',
-    aspectRatio: 'wide',
-    comments: [
-      {
-        id: 'c-3',
-        author: 'Я',
-        text: 'Море тогда было удивительно спокойным, прямо как на душе рядом с тобой.',
-        createdAt: '20 августа, 09:20',
-      },
-    ],
-    createdAt: 1724000000000,
+    title: 'ее любимое занятие 😂',
+    caption: 'Даже в самые обычные моменты рядом с тобой всегда весело и тепло.',
+    category: 'Прогулки',
+    dateLabel: '23 ноября',
+    imageUrl: imgHair,
+    aspectRatio: 'square',
+    comments: [],
+    createdAt: 1730000006000,
   },
   {
     id: 'seed-4',
-    title: 'Пионы и первые строчки',
-    caption:
-      'Твои любимые цветы на столе и бумага, на которой я пытался записать хотя бы десятую часть своей нежности.',
+    title: 'ты моя самая нежная звездочка',
+    caption: 'Твой взгляд и твоя нежность делают меня самым счастливым.',
     category: 'Нежность',
-    dateLabel: '28 мая',
-    imageUrl: '/src/assets/images/moment_flowers_table_1795402355167.jpg',
+    dateLabel: '23 ноября',
+    imageUrl: imgLove,
+    aspectRatio: 'square',
+    comments: [],
+    createdAt: 1730000005000,
+  },
+  {
+    id: 'seed-5',
+    title: 'красавица',
+    caption: 'Невозможно оторвать взгляд, ты прекрасна в каждом кадре.',
+    category: 'Вечер',
+    dateLabel: '23 ноября',
+    imageUrl: imgKind,
+    aspectRatio: 'square',
+    comments: [],
+    createdAt: 1730000004000,
+  },
+  {
+    id: 'seed-6',
+    title: 'самая красивая девушка',
+    caption: 'Моя гордость, моё счастье и моя самая любимая история.',
+    category: 'Прогулки',
+    dateLabel: '23 ноября',
+    imageUrl: imgBeautiful,
     aspectRatio: 'portrait',
     comments: [],
-    createdAt: 1716900000000,
+    createdAt: 1730000003000,
+  },
+  {
+    id: 'seed-7',
+    title: 'Счастливые моменты',
+    caption: 'Каждый день с тобой — как маленький праздник.',
+    category: 'Утро',
+    dateLabel: '23 ноября',
+    imageUrl: imgHappyBirthday,
+    aspectRatio: 'portrait',
+    comments: [],
+    createdAt: 1730000002000,
+  },
+  {
+    id: 'seed-8',
+    title: 'Нежность в каждом взгляде',
+    caption: 'Храню в сердце каждую секунду, проведённую рядом с тобой.',
+    category: 'Нежность',
+    dateLabel: '23 ноября',
+    imageUrl: imgKid,
+    aspectRatio: 'portrait',
+    comments: [],
+    createdAt: 1730000001000,
   },
 ];
 
