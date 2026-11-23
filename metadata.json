@@ -1,0 +1,6 @@
+{
+  "name": "Для тебя — Признание в любви",
+  "description": "Личный романтический сайт с признанием в любви, галереей фотографий с комментариями, голосовыми сообщениями и фоновой музыкой.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
