@@ -15,7 +15,7 @@ import imgBeautiful from '../assets/images/beautiful.jpg';
 import imgHappyBirthday from '../assets/images/happy_birthday.jpg';
 import imgKid from '../assets/images/kid.jpg';
 
-const DB_NAME = 'love_archive_db';
+const DB_NAME = 'rayona_love_db_v2';
 const DB_VERSION = 1;
 
 const STORE_PROFILE = 'profile';
@@ -246,12 +246,6 @@ export async function loadPhotos(): Promise<PhotoMemory[]> {
     });
 
     if (records.length === 0) {
-      // Seed initial curated photos once
-      const tx = db.transaction(STORE_PHOTOS, 'readwrite');
-      const store = tx.objectStore(STORE_PHOTOS);
-      for (const seed of INITIAL_PHOTOS) {
-        store.put(seed);
-      }
       return INITIAL_PHOTOS;
     }
 
